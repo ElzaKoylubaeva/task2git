@@ -13,6 +13,9 @@ public class Main {
         SalesManager salesManager = new SalesManager(sales);
         int max = salesManager.max();
         System.out.println("The highest monthly sales " + max);
+
+        double avg = salesManager.average();
+        System.out.println("Truncated average meaning " + avg);
     }
 }
 

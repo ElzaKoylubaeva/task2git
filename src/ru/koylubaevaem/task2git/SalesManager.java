@@ -1,3 +1,5 @@
+package ru.koylubaevaem.task2git;
+
 public class SalesManager {
 
     protected int[] sales;

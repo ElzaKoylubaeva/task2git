@@ -1,3 +1,5 @@
+package ru.koylubaevaem.task2git;
+
 public class Main {
     public static final int SIZE = 30;
 

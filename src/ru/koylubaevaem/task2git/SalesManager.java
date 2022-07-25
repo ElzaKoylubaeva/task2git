@@ -19,8 +19,10 @@ public class SalesManager {
     }
 
     public double average() {
+        if (sales.length <= 2) return 0.0;
         long min = sales[0];
         long max = sales[0];
+        long sum = 0;
         for (int i = 1; i < sales.length; i++) {
             long sale = sales[i];
             if (sale < min) {
@@ -29,15 +31,8 @@ public class SalesManager {
             if (sale > max) {
                 max = sale;
             }
+            sum += sale;
         }
-        int sum = 0;
-        int count = 0;
-        for (long sale : sales) {
-            if (sale != min && sale != max) {
-                sum += sale;
-                count++;
-            }
-        }
-        return count == 0 ? 0.0 : 1.0 * sum / count;
+        return 1.0 * (sum - min - max) / (sales.length - 2);
     }
 }
